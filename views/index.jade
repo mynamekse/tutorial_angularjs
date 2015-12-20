@@ -1,7 +1,11 @@
 extends layout
 
 block content
-    div
-        h1= title
-         p Welcdddddddddddddddome to #{title} 
-        {{5*5}}
+    div(ng-init="name='AngularJS'")
+        input(type='text',ng-model='name')
+        div 
+            h2 {{name}}
+    - for (var x = 0; x < 3; x++)
+        li x
+        
+            
